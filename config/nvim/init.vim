@@ -4,11 +4,11 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set encoding=utf-8
-set fileencodings=euc-jp,sjis,utf-8
+set fileencodings=utf-8,shift-jis,euc-jp
 set fileformats=unix,dos,mac
 set mouse=a
 
-" syntx ÀßÄê
+" syntx è¨­å®š
 syntax on
 colorscheme koehler
 "dein
@@ -41,19 +41,19 @@ if dein#check_install()
 endif
 
 " vim-nerdtree-tabs settings
-" ±£¤·¥Õ¥¡¥¤¥ë¤òÉ½¼¨¤¹¤ë
+" éš ã—ãƒ•ã‚¡ã‚¤ãƒ«ã‚’è¡¨ç¤ºã™ã‚‹
 let NERDTreeShowHidden = 1
 let NERDTreeShowLineNumbers = 1
 
 nnoremap <silent><C-e> :NERDTreeFocusToggle<CR>
 
-" ¥Ç¥Õ¥©¥ë¥È¤Ç¥Ä¥ê¡¼¤òÉ½¼¨¤µ¤»¤ë
+" ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã§ãƒ„ãƒªãƒ¼ã‚’è¡¨ç¤ºã•ã›ã‚‹
 let g:nerdtree_tabs_open_on_console_startup=1
-" NERDTree¥¿¥Ö°ÜÆ°
+" NERDTreeã‚¿ãƒ–ç§»å‹•
 nnoremap <C-n> gt
 nnoremap <C-p> gT
-" Â¾¤Î¥Ğ¥Ã¥Õ¥¡¤ò¤¹¤Ù¤ÆÊÄ¤¸¤¿»ş¤ËNERDTree¤¬³«¤¤¤Æ¤¤¤¿¤éNERDTree¤â°ì½ï¤ËÊÄ¤¸¤ë¡£
-"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" ä»–ã®ãƒãƒƒãƒ•ã‚¡ã‚’ã™ã¹ã¦é–‰ã˜ãŸæ™‚ã«NERDTreeãŒé–‹ã„ã¦ã„ãŸã‚‰NERDTreeã‚‚ä¸€ç·’ã«é–‰ã˜ã‚‹ã€‚
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 "autocmd VimEnter * execute 'NERDTree'
 "autocmd VimEnter * execute 'NERDTreeTabsOpen'
